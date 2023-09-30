@@ -32,6 +32,8 @@ body {
     border: none;
     height: 14rem;
     color: white;
+    font-size: 9rem;
+    padding: 1rem;
 }
 
 .botones {
