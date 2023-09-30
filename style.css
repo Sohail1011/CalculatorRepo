@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Oswald';
 }
 
 body {
@@ -21,4 +22,103 @@ body {
     color: white;
     width: 22rem;
     height: 36rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+}
+
+.container input {
+    background-color: transparent;
+    border: none;
+    height: 14rem;
+    color: white;
+}
+
+.botones {
+    background-color: #F0F0F3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 22rem;
+    gap: 0.6rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    grid-template-areas:
+        'n1 n2 n3 n4'
+        'n5 n6 n7 n8'
+        'n9 n10 n11 n12'
+        'n13 n14 n15 n16'
+        'n17 n17 n17 n18';
+}
+
+.itemBoton1 {
+    grid-area: n1;
+}
+
+.itemBoton2 {
+    grid-area: n2;
+}
+
+.itemBoton3 {
+    grid-area: n3;
+}
+
+.itemBoton4 {
+    grid-area: n4;
+}
+
+.itemBoton5 {
+    grid-area: n5;
+}
+
+.itemBoton6 {
+    grid-area: n6;
+}
+
+.itemBoton7 {
+    grid-area: n7;
+}
+
+.itemBoton8 {
+    grid-area: n8;
+}
+
+.itemBoton9 {
+    grid-area: n9;
+}
+
+.itemBoton10 {
+    grid-area: n10;
+}
+
+.itemBoton11 {
+    grid-area: n11;
+}
+
+.itemBoton12 {
+    grid-area: n12;
+}
+
+.itemBoton13 {
+    grid-area: n13;
+}
+
+.itemBoton14 {
+    grid-area: n14;
+}
+
+.itemBoton15 {
+    grid-area: n15;
+}
+
+.itemBoton16 {
+    grid-area: n16;
+}
+
+.itemBoton17 {
+    grid-area: n17;
+}
+
+.itemBoton18 {
+    grid-area: n18;
 }
