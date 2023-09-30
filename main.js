@@ -1,55 +1,14 @@
-let displayValue = '';
-let currentOperator = '';
-let firstOperand = '';
+let display = document.getElementById('display')
+let buttons = document.querySelectorAll('button')
 
-function appendToDisplay(value) {
-    displayValue += value;
-    document.getElementById('display').value = displayValue;
-}
-
-function clearDisplay() {
-    displayValue = '';
-    document.getElementById('display').value = '';
-}
-
-function setOperator(operator) {
-    if (firstOperand === '') {
-        firstOperand = displayValue;
-        displayValue = '';
-        currentOperator = operator;
-    } else {
-
-    }
-}
-
-function calculateResult() {
-    let result;
-    const secondOperand = displayValue;
-
-    switch (currentOperator) {
-        case '+':
-            result = parseFloat(firstOperand) + parseFloat(secondOperand);
-            break;
-        case '-':
-            result = parseFloat(firstOperand) - parseFloat(secondOperand);
-            break;
-        case '*':
-            result = parseFloat(firstOperand) * parseFloat(secondOperand);
-            break;
-        case '/':
-            if (secondOperand === '0') {
-                document.getElementById('display').value = 'Error';
-                displayValue = '';
-                return;
-            }
-            result = parseFloat(firstOperand) / parseFloat(secondOperand);
-            break;
-        default:
-            return;
-    }
-
-    document.getElementById('display').value = result;
-    displayValue = result.toString();
-    firstOperand = '';
-    currentOperator = '';
-}
+buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        if (btn.id === '=') {
+            display.value = eval(display.value);
+        } else if (btn.id === 'c') {
+            display.value = '';
+        } else {
+            display.value += btn.id;
+        }
+    })
+})
